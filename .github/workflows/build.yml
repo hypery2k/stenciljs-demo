@@ -21,9 +21,11 @@ jobs:
 
     - name: npm install
       run: |
+        cd component-library
         npm ci
 
     - name: build and test
       run: |
+        cd component-library
         npm run build
         npm run test
