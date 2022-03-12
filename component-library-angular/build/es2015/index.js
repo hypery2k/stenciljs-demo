@@ -3,6 +3,6 @@
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 // DIRECTIVES
-export { MyComponent } from './directives/proxies';
+export { AwesomeCounter, MyComponent } from './directives/proxies';
 // PACKAGE MODULE
 export { ComponentLibraryModule } from './component-library-module';

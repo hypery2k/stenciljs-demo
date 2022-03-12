@@ -5,5 +5,5 @@
 /**
  * Generated bundle index. Do not edit.
  */
-export { ComponentLibraryModule, MyComponent } from './index';
+export { ComponentLibraryModule, AwesomeCounter, MyComponent } from './index';
 export { ProxyCmp as ɵa } from './directives/angular-component-lib/utils';

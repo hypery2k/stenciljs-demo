@@ -1,6 +1,5 @@
 import React from 'react';
-
-import type { StyleReactProps } from '../interfaces';
+import { StyleReactProps } from '../interfaces';
 
 export type StencilReactExternalProps<PropType, ElementType> = PropType &
   Omit<React.HTMLAttributes<ElementType>, 'style'> &
@@ -16,6 +15,19 @@ export const setRef = (ref: StencilReactForwardedRef<any> | React.Ref<any> | und
     // Cast as a MutableRef so we can assign current
     (ref as React.MutableRefObject<any>).current = value
   }
+};
+
+export const generateUniqueId = () => {
+  return (
+    [1e7].toString() +
+    -(1e3).toString() +
+    -(4e3).toString() +
+    -(8e3).toString() +
+    -(1e11).toString()
+  ).replace(/[018]/g, (c: any) => {
+    const random = crypto.getRandomValues(new Uint8Array(1)) as Uint8Array;
+    return (c ^ (random[0] & (15 >> (c / 4)))).toString(16);
+  });
 };
 
 export const mergeRefs = (
@@ -55,3 +67,4 @@ export const defineCustomElement = (tagName: string, customElement: any) => {
 
 export * from './attachProps';
 export * from './case';
+

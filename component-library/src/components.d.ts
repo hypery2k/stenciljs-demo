@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AwesomeCounter {
+        "max": number;
+        "min": number;
+        "start": number;
+        "step": number;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +28,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAwesomeCounterElement extends Components.AwesomeCounter, HTMLStencilElement {
+    }
+    var HTMLAwesomeCounterElement: {
+        prototype: HTMLAwesomeCounterElement;
+        new (): HTMLAwesomeCounterElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +41,18 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "awesome-counter": HTMLAwesomeCounterElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface AwesomeCounter {
+        "max"?: number;
+        "min"?: number;
+        "onCounterUpdate"?: (event: CustomEvent<any>) => void;
+        "start"?: number;
+        "step"?: number;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +68,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "awesome-counter": AwesomeCounter;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +76,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "awesome-counter": LocalJSX.AwesomeCounter & JSXBase.HTMLAttributes<HTMLAwesomeCounterElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
