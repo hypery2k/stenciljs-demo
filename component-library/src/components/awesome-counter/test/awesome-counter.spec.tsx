@@ -10,7 +10,17 @@ describe('awesome-counter', () => {
     expect(page.root).toEqualHtml(`
       <awesome-counter>
         <mock:shadow-root>
-          <slot></slot>
+          <div>
+             <button type="button">
+               +
+             </button>
+             <span>
+               1
+             </span>
+             <button type="button">
+               -
+             </button>
+          </div>
         </mock:shadow-root>
       </awesome-counter>
     `);
