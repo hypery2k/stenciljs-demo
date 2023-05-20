@@ -19,7 +19,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@m13t/component-library": "0.2.1",
+    "@m13t/component-library": "0.4.1",
     "hyperid": "^3.1.1"
   },
   "devDependencies": {
