@@ -36,8 +36,8 @@
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.7.0 || ^18.2.0",
+    "react-dom": "^16.7.0 || ^18.2.0"
   },
   "resolutions": {
     "//": "Avoid version that drops support for TypeScript < 3.7",
