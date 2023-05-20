@@ -12,6 +12,6 @@
     "@m13t/component-library": "^0.4.0"
   },
   "devDependencies": {
-    "typescript": "^4.5.5"
+    "typescript": "^5.0.0"
   }
 }
