@@ -46,6 +46,10 @@
     "rxjs": "~6.5.2 || ~6.6.0",
     "zone.js": "~0.9.1"
   },
+  "resolutions": {
+    "//": "Avoid version that drops support for TypeScript < 3.7",
+    "@types/node": "<12.20.21"
+  },
   "devDependencies": {
     "@angular-devkit/core": "^16.0.0",
     "@angular-devkit/schematics": "^16.0.0",
@@ -57,16 +61,16 @@
     "@angular/platform-browser": "^8.2.4",
     "@angular/platform-browser-dynamic": "^8.2.4",
     "@angular/router": "^8.2.4",
-    "@types/node": "~18.16.0",
+    "@rollup/plugin-node-resolve": "^6.1.0",
+    "@types/node": "12.20.20",
     "fs-extra": "^11.0.0",
     "glob": "^10.0.0",
     "rollup": "^1.1.2",
-    "@rollup/plugin-node-resolve": "^6.0.0",
     "rxjs": "~6.6.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.20.0",
     "tslint-ionic-rules": "0.0.21",
-    "typescript": "~3.5.3",
+    "typescript": "^3.5.3",
     "zone.js": "~0.9.1"
   }
 }
