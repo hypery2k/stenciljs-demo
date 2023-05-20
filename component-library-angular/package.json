@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "@m13t/component-library": "0.4.1",
-    "tslib": "^1.9.3"
+    "tslib": "^2.0.0"
   },
   "peerDependencies": {
     "@angular-devkit/core": "^8.2.4 || ^16.0.2",
