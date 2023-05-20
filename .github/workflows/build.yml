@@ -3,29 +3,80 @@ name: CI
 on: [push]
 
 jobs:
-  test:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+  component-library:
+    name: Test component library on node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: [14, 16]
+        node-version: [16, 18, 20]
         os: [ubuntu-latest, macOS-latest]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup-node@v3
-      with:
-        node_version: ${{ matrix.node_version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: npm install
-      run: |
-        cd component-library
-        npm ci
+      - name: npm install
+        run: |
+          cd component-library
+          npm ci
 
-    - name: build and test
-      run: |
-        cd component-library
-        npm run build
-        npm run test
+      - name: build and test
+        run: |
+          cd component-library
+          npm run build
+          npm run test
+
+  angular:
+    name: Test Angular on node ${{ matrix.node-version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [16, 18, 20]
+        os: [ubuntu-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: build and test
+        run: |
+          cd component-library
+          npm ci
+          npm run build
+          npm pack
+          cd ../component-library-angular/
+          npm ci
+          npm i ../component-library/m13t-component-library-*.tgz
+          npm run build
+
+  react:
+    name: Test React on node ${{ matrix.node-version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [16, 18, 20]
+        os: [ubuntu-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: build and test
+        run: |
+          cd component-library
+          npm ci
+          npm run build
+          npm pack
+          cd ../component-library-react/
+          npm ci
+          npm i ../component-library/m13t-component-library-*.tgz
+          npm run build

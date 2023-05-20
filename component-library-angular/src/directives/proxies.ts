@@ -1,30 +1,21 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
+
 import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import { Components } from '@m13t/component-library';
 
 
-
-
-export declare interface AwesomeCounter extends Components.AwesomeCounter {
-  /**
-   *  
-   */
-  counterUpdate: EventEmitter<CustomEvent<any>>;
-
-}
-
 @ProxyCmp({
-  defineCustomElementFn: undefined,
   inputs: ['max', 'min', 'start', 'step']
 })
 @Component({
   selector: 'awesome-counter',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['max', 'min', 'start', 'step']
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['max', 'min', 'start', 'step'],
 })
 export class AwesomeCounter {
   protected el: HTMLElement;
@@ -36,17 +27,21 @@ export class AwesomeCounter {
 }
 
 
-export declare interface MyComponent extends Components.MyComponent {}
+export declare interface AwesomeCounter extends Components.AwesomeCounter {
+
+  counterUpdate: EventEmitter<CustomEvent<any>>;
+}
+
 
 @ProxyCmp({
-  defineCustomElementFn: undefined,
   inputs: ['first', 'last', 'middle']
 })
 @Component({
   selector: 'my-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['first', 'last', 'middle']
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['first', 'last', 'middle'],
 })
 export class MyComponent {
   protected el: HTMLElement;
@@ -55,3 +50,8 @@ export class MyComponent {
     this.el = r.nativeElement;
   }
 }
+
+
+export declare interface MyComponent extends Components.MyComponent {}
+
+

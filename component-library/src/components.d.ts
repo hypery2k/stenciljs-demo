@@ -27,6 +27,10 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface AwesomeCounterCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLAwesomeCounterElement;
+}
 declare global {
     interface HTMLAwesomeCounterElement extends Components.AwesomeCounter, HTMLStencilElement {
     }
@@ -49,7 +53,7 @@ declare namespace LocalJSX {
     interface AwesomeCounter {
         "max"?: number;
         "min"?: number;
-        "onCounterUpdate"?: (event: CustomEvent<any>) => void;
+        "onCounterUpdate"?: (event: AwesomeCounterCustomEvent<any>) => void;
         "start"?: number;
         "step"?: number;
     }
