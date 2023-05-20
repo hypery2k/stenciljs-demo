@@ -18,7 +18,7 @@ export const proxyInputs = (/**
      * @param {?} item
      * @return {?}
      */
-    item => {
+    (item) => {
         Object.defineProperty(Prototype, item, {
             /**
              * @return {?}
@@ -35,7 +35,7 @@ export const proxyInputs = (/**
                  * @return {?}
                  */
                 () => (this.el[item] = val)));
-            }
+            },
         });
     }));
 });
@@ -52,7 +52,7 @@ export const proxyMethods = (/**
      * @param {?} methodName
      * @return {?}
      */
-    methodName => {
+    (methodName) => {
         Prototype[methodName] = (/**
          * @return {?}
          */
@@ -78,7 +78,7 @@ export const proxyOutputs = (/**
      * @param {?} eventName
      * @return {?}
      */
-    eventName => instance[eventName] = fromEvent(el, eventName)));
+    (eventName) => (instance[eventName] = fromEvent(el, eventName))));
 });
 /** @type {?} */
 export const defineCustomElement = (/**
@@ -87,14 +87,10 @@ export const defineCustomElement = (/**
  * @return {?}
  */
 (tagName, customElement) => {
-    if (customElement !== undefined &&
-        typeof customElements !== 'undefined' &&
-        !customElements.get(tagName)) {
+    if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {
         customElements.define(tagName, customElement);
     }
-})
-// tslint:disable-next-line: only-arrow-functions
-;
+});
 // tslint:disable-next-line: only-arrow-functions
 /**
  * @param {?} opts
