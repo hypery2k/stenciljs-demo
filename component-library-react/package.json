@@ -19,19 +19,20 @@
     "dist/"
   ],
   "dependencies": {
-    "@m13t/component-library": "0.2.1"
+    "@m13t/component-library": "0.2.1",
+    "hyperid": "^3.1.1"
   },
   "devDependencies": {
-    "@types/jest": "23.3.14",  
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "@types/jest": "23.3.14",
     "@types/node": "12.20.20",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "16.9.19",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "jest": "^23.0.0",
     "jest-dom": "^4.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "rollup": "^1.21.2",
-    "@rollup/plugin-node-resolve": "^6.0.0",
     "typescript": "^3.5.3"
   },
   "peerDependencies": {

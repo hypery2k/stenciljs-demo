@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateUniqueId } from './utils/index';
+import { generateUniqueId } from './utils/id';
 import { attachEventProps } from './utils/attachEventProps';
 
 interface LoadingElement {

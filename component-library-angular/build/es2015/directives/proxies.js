@@ -25,7 +25,8 @@ AwesomeCounter.decorators = [
                 selector: 'awesome-counter',
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 template: '<ng-content></ng-content>',
-                inputs: ['max', 'min', 'start', 'step']
+                // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+                inputs: ['max', 'min', 'start', 'step'],
             },] },
 ];
 /** @nocollapse */
@@ -36,7 +37,6 @@ AwesomeCounter.ctorParameters = () => [
 ];
 AwesomeCounter = tslib_1.__decorate([
     ProxyCmp({
-        defineCustomElementFn: undefined,
         inputs: ['max', 'min', 'start', 'step']
     }),
     tslib_1.__metadata("design:paramtypes", [ChangeDetectorRef, ElementRef, NgZone])
@@ -71,7 +71,8 @@ MyComponent.decorators = [
                 selector: 'my-component',
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 template: '<ng-content></ng-content>',
-                inputs: ['first', 'last', 'middle']
+                // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+                inputs: ['first', 'last', 'middle'],
             },] },
 ];
 /** @nocollapse */
@@ -82,7 +83,6 @@ MyComponent.ctorParameters = () => [
 ];
 MyComponent = tslib_1.__decorate([
     ProxyCmp({
-        defineCustomElementFn: undefined,
         inputs: ['first', 'last', 'middle']
     }),
     tslib_1.__metadata("design:paramtypes", [ChangeDetectorRef, ElementRef, NgZone])

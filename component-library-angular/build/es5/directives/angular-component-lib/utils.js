@@ -36,7 +36,7 @@ function (Cmp, inputs) {
                  * @return {?}
                  */
                 function () { return (_this.el[item] = val); }));
-            }
+            },
         });
     }));
 });
@@ -64,9 +64,7 @@ function (Cmp, methods) {
             return this.z.runOutsideAngular((/**
              * @return {?}
              */
-            function () {
-                return _this.el[methodName].apply(_this.el, args);
-            }));
+            function () { return _this.el[methodName].apply(_this.el, args); }));
         });
     }));
 });
@@ -82,7 +80,7 @@ function (instance, el, events) {
      * @param {?} eventName
      * @return {?}
      */
-    function (eventName) { return instance[eventName] = fromEvent(el, eventName); }));
+    function (eventName) { return (instance[eventName] = fromEvent(el, eventName)); }));
 });
 /** @type {?} */
 export var defineCustomElement = (/**
@@ -91,14 +89,10 @@ export var defineCustomElement = (/**
  * @return {?}
  */
 function (tagName, customElement) {
-    if (customElement !== undefined &&
-        typeof customElements !== 'undefined' &&
-        !customElements.get(tagName)) {
+    if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {
         customElements.define(tagName, customElement);
     }
-})
-// tslint:disable-next-line: only-arrow-functions
-;
+});
 // tslint:disable-next-line: only-arrow-functions
 /**
  * @param {?} opts
