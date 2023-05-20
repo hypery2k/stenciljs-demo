@@ -19,7 +19,8 @@ var AwesomeCounter = /** @class */ (function () {
                     selector: 'awesome-counter',
                     changeDetection: ChangeDetectionStrategy.OnPush,
                     template: '<ng-content></ng-content>',
-                    inputs: ['max', 'min', 'start', 'step']
+                    // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+                    inputs: ['max', 'min', 'start', 'step'],
                 },] },
     ];
     /** @nocollapse */
@@ -30,7 +31,6 @@ var AwesomeCounter = /** @class */ (function () {
     ]; };
     AwesomeCounter = tslib_1.__decorate([
         ProxyCmp({
-            defineCustomElementFn: undefined,
             inputs: ['max', 'min', 'start', 'step']
         }),
         tslib_1.__metadata("design:paramtypes", [ChangeDetectorRef, ElementRef, NgZone])
@@ -61,7 +61,8 @@ var MyComponent = /** @class */ (function () {
                     selector: 'my-component',
                     changeDetection: ChangeDetectionStrategy.OnPush,
                     template: '<ng-content></ng-content>',
-                    inputs: ['first', 'last', 'middle']
+                    // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+                    inputs: ['first', 'last', 'middle'],
                 },] },
     ];
     /** @nocollapse */
@@ -72,7 +73,6 @@ var MyComponent = /** @class */ (function () {
     ]; };
     MyComponent = tslib_1.__decorate([
         ProxyCmp({
-            defineCustomElementFn: undefined,
             inputs: ['first', 'last', 'middle']
         }),
         tslib_1.__metadata("design:paramtypes", [ChangeDetectorRef, ElementRef, NgZone])
