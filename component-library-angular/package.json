@@ -35,16 +35,16 @@
   "peerDependencies": {
     "@angular-devkit/core": "^8.2.4 || ^16.0.2",
     "@angular-devkit/schematics": "^8.2.4 || ^16.0.2",
-    "@angular/common": "^8.2.4",
-    "@angular/compiler": "^8.2.4",
-    "@angular/compiler-cli": "^8.2.4",
-    "@angular/core": "^8.2.4",
-    "@angular/forms": "^8.2.4",
-    "@angular/platform-browser": "^8.2.4",
-    "@angular/platform-browser-dynamic": "^8.2.4",
-    "@angular/router": "^8.2.4",
+    "@angular/common": "^8.2.4 || ^16.0.2",
+    "@angular/compiler": "^8.2.4 || ^16.0.2",
+    "@angular/compiler-cli": "^8.2.4 || ^16.0.2",
+    "@angular/core": "^8.2.4 || ^16.0.2",
+    "@angular/forms": "^8.2.4 || ^16.0.2",
+    "@angular/platform-browser": "^8.2.4 || ^16.0.2",
+    "@angular/platform-browser-dynamic": "^8.2.4 || ^16.0.2",
+    "@angular/router": "^8.2.4 || ^16.0.2",
     "rxjs": "~6.5.2 || ~6.6.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1 || ~0.13.0"
   },
   "resolutions": {
     "//": "Avoid version that drops support for TypeScript < 3.7",
