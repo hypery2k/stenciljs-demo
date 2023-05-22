@@ -93,9 +93,10 @@ typings/
 # Next.js build output
 .next
 
-# Nuxt.js build / generate output
+# build / generate output
 .nuxt
 dist
+build
 
 # Gatsby files
 .cache/
