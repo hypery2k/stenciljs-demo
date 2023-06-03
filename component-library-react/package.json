@@ -1,6 +1,6 @@
 {
   "name": "@m13t/component-library-react",
-  "version": "0.2.1",
+  "version": "0.6.0",
   "description": "React specific wrapper for component-library",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@m13t/component-library": "^0.5.0",
+    "@m13t/component-library": "^0.6.0",
     "hyperid": "^3.1.1"
   },
   "devDependencies": {
