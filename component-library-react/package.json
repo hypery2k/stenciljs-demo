@@ -25,7 +25,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@types/jest": "23.3.14",
-    "@types/node": "18.17.0",
+    "@types/node": "18.17.1",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "jest": "^23.0.0",
@@ -41,7 +41,7 @@
   },
   "resolutions": {
     "//": "Avoid version that drops support for TypeScript < 3.7",
-    "@types/node": "18.17.0"
+    "@types/node": "18.17.1"
   },
   "jest": {
     "preset": "ts-jest",
