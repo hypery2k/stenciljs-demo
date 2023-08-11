@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@m13t/component-library": "^0.6.0"
+    "@m13t/component-library": "^0.7.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
