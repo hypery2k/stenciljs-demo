@@ -1,6 +1,13 @@
 name: CI
 
-on: [push]
+on:
+  merge_group:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+  schedule:
+    - cron: '0 0 * * WED'
 
 jobs:
   component-library:
