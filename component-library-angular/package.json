@@ -33,8 +33,8 @@
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular-devkit/core": "^8.2.4 || ^16.0.2",
-    "@angular-devkit/schematics": "^8.2.4 || ^16.0.2",
+    "@angular-devkit/core": "^8.2.4 || ^16.0.2 || ^18.0.0",
+    "@angular-devkit/schematics": "^8.2.4 || ^16.0.2 || ^18.0.0",
     "@angular/common": "^8.2.4 || ^16.0.2",
     "@angular/compiler": "^8.2.4 || ^16.0.2",
     "@angular/compiler-cli": "^8.2.4 || ^16.0.2",
@@ -51,8 +51,8 @@
     "@types/node": "18.19.44"
   },
   "devDependencies": {
-    "@angular-devkit/core": "^16.0.0",
-    "@angular-devkit/schematics": "^16.0.0",
+    "@angular-devkit/core": "^18.0.0",
+    "@angular-devkit/schematics": "^18.0.0",
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/compiler-cli": "^16.0.0",
