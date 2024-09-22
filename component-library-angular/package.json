@@ -74,7 +74,7 @@
     "eslint-plugin-unicorn": "^48.0.0",
     "fs-extra": "^11.0.0",
     "glob": "^10.0.0",
-    "rollup": "^3.0.0",
+    "rollup": "^4.0.0",
     "rxjs": "~6.6.0",
     "typescript": "^5.0.0",
     "zone.js": "~0.15.0"
